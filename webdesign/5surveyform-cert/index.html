@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Linux Survey Form</title>
+</head>
+<body>
+<h1 id="title">Linux Survey Form</h1>
+<p id="description">A survey to find about linux users</p>
+<form id="survey-form">
+
+	<!--Personal Details-->
+  <fieldset>
+    <label for="name" id="name-label">
+			What is your name?
+			<input id="name" name="name" type="text" placeholder="Your Name" required/>
+		</label>
+    <label for="email" id="email-label">
+			Please enter your email:
+			<input id="email" name="email" type="email" placeholder="example@example.com" required/>
+		</label>
+    <label for="number" id="number-label">
+			Please enter your contact number:
+			<input id="number" name="number" type="number" length="10" min="0000000000" max="9999999999" placeholder="0000000000" required/>
+		</label>
+  </fieldset>
+
+	<!--Experience-->
+	<fieldset>
+		<label for="experience" id="experience">What is your linux experience?
+			<select id="dropdown" name="experience">
+				<option value="1">Beginner</option>
+				<option value="2">Intermediate</option>
+				<option value="3">Experienced</option>
+			</select>
+		</label>
+	</fieldset>
+
+	<!--Coding-->
+	<fieldset>
+		<legend>Are you a programmer?</legend>
+		<label for="yesprogrammer">
+			<input id="yesprogrammer" value="1" type="radio" name="programmer" class="inline" checked />
+			Yes
+		</label>
+		<label for="noprogrammer">
+			<input id="noprogrammer" value="0" type="radio" name="programmer" class="inline" />
+			No
+		</label>
+	</fieldset>
+
+	<!--Distro-->
+	<fieldset>
+		<p id="distro">What distributions do you prefer?</p>
+		<label for="debian" name="distro">
+			<input name="distro" id="debian" value="debian" type="checkbox" class="input-checkbox">
+			Debian Family
+		</label>
+		<label for="redhat" name="distro">
+			<input name="distro" id="redhat" value="redhat" type="checkbox" class="input-checkbox">
+			Red-Hat/Fedora Family
+		</label>
+		<label for="arch" name="distro">
+			<input name="distro" id="arch" value="arch" type="checkbox" class="input-checkbox">
+			Arch and Derivatives
+		</label>
+		<label for="suse" name="distro">
+			<input name="distro" id="suse" value="suse" type="checkbox" class="input-checkbox">
+			SuSe/Opensuse
+		</label>
+		<label for="indi" name="distro">
+			<input name="distro" id="indi" value="indi" type="checkbox" class="input-checkbox">
+			Independent/Source Based
+		</label>
+		<label for="other" name="distro">
+			<input name="distro" id="other" value="other" type="checkbox" class="input-checkbox">
+			Other
+		</label>
+	</fieldset>
+
+	<!--Comments-->
+	<fieldset>
+		<label for="comments" class="left">
+			What additional comments/suggestions do you have for the linux desktop?
+			<textarea id="comments" name="comments" rows="4" cols="30" placeholder="Anything you want!"></textarea>
+		</label>
+	</fieldset>
+
+	<!--Submit-->
+	<fieldset>
+		<input id="submit" type="submit" value="Submit The Form" />
+	</fieldset>
+	
+</form>
+</body>
+</html>
